@@ -1,4 +1,4 @@
-package example10.classes
+package example010.classes
 
 class Calculator {
   val color = "White"
