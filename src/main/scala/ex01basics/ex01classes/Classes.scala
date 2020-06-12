@@ -1,4 +1,4 @@
-package example010.classes
+package ex01basics.ex01classes
 
 class Calculator {
   val color = "White"

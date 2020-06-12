@@ -1,4 +1,4 @@
-package example020.traits
+package ex01basics.ex02traits
 
 trait Motorbike {
   val brand: String
