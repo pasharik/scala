@@ -22,3 +22,10 @@ println(hostPort match {
 })
 //Special syntax for tuple: a -> b
 val numTuple: (Int, Int) = 1 -> 2
+
+
+//Map - parameters just tuples
+val m = Map(1 -> "One", (2, "Two"))
+println(m(1))
+val fMap = Map("printer" -> { println(_: Any) })
+fMap("printer")("Hello!")
