@@ -1,4 +1,4 @@
-package week2.assignment
+package coursera.week2.assignment
 
 import org.junit._
 
