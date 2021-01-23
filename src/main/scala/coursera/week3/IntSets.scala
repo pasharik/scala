@@ -1,3 +1,5 @@
+package coursera.week3
+
 abstract class IntSet {
   def incl(x: Int): IntSet
   def contains(x: Int): Boolean
@@ -35,6 +37,7 @@ object Empty extends IntSet {
   override def toString = "."
 }
 
+
 ///////////
-val t1 = new NonEmpty(3, Empty, Empty)
-val t2 = t1 incl 4
+//val t1 = new NonEmpty(3, Empty, Empty)
+//val t2 = t1 incl 4
