@@ -22,13 +22,17 @@ def foldRight[U, T](z: U)(list: List[T], op: (T, U) => U): U = list match {
   case x :: xs => op(x, foldRight(z)(xs, op))
 }
 
-//DIY
+///////// Map using fold
 def mapFunMy[T, U](xs: List[T], f: T => U): List[U] =
   foldRight(List[U]())(xs, (a: T, b: List[U]) => f(a) :: b )
 
 //Standard scala List.foldRight
 def mapFun[T, U](xs: List[T], f: T => U): List[U] =
   (xs foldRight List[U]())( (a: T, l: List[U]) => f(a) :: l )
+/////////////////////////
+
+def lengthFun[T](xs: List[T]): Int =
+  (xs foldRight 0)( (_, a: Int) => a + 1 )
 
 //Testing
 val l = List(1, 2, 3, 4)
@@ -40,3 +44,5 @@ reduceRight[Int](l, (a, b) => a + b)  //sum
 
 mapFun(l, (a: Int) => a * 2)
 mapFunMy(l, (a: Int) => a * 2)
+
+lengthFun(l)
